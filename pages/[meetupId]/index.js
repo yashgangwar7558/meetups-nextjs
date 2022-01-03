@@ -16,7 +16,7 @@ export const getStaticPaths = async () => {
     client.close()
 
     return {
-        fallback: false, // means all the possible pages are already pre generated as their data is thier in paths 
+        fallback: 'blocking', // means all the possible pages are already pre generated as their data is thier in paths 
         paths: meetupsIds.map((currElem) => (    // its a list of objects with all possible pages data
             {
                 params: {  // object with list of values for a particular page 
